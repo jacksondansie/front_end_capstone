@@ -1,0 +1,24 @@
+.products-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+
+    .product{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+        border: 1px solid red;
+        margin: 20px;
+
+        .product-image{
+            width: 200px;
+        }
+
+        .product-description-container{
+            border: 1px solid red;
+        }
+    }
+}
