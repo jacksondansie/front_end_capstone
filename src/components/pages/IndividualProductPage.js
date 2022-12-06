@@ -18,16 +18,19 @@ export default function IndividualProductPage(props) {
     return(
         <div className="individual-product-page"> 
             <h1>Individual Product Details</h1>
+
             <div className="product">
                 <img src={productDetails.image} alt="product-img" className="product-image"/>
+
                 <div className="product-description-container">
                     <h5 className="product-name">{productDetails.title}</h5>
                     <h5 className="product-price">{formatter.format(productDetails.price)}</h5>
                     <h5 className="product-description">{productDetails.description}</h5>
                     <h5 className="product-category">{productDetails.category}</h5>
                     <button>Add to Cart</button>
+
                 </div>
-            </div>;
+            </div>
         </div>
     )
 }
