@@ -17,9 +17,9 @@ export default function App() {
         <div className="navbar">
           <NavLink className="navlink" to="/">Home</NavLink>
           <NavLink className="navlink" to="/products">Products</NavLink>
+          <NavLink className="navlink" to="/cart">Cart</NavLink>
           <NavLink className="navlink" to="/contact">Contact</NavLink>
           <NavLink className="navlink" to="/about">About</NavLink>
-          <NavLink className="navlink" to="/cart">Cart</NavLink>
         </div>
 
         <CartProvider>

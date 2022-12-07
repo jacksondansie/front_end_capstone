@@ -23,15 +23,15 @@
         justify-content: center;
         align-items: center;
         width: 40vw;
-        border: 1px solid red;
-        margin: 20px;
+        border: 1px solid black;
+        margin-top: 20px;
 
         .product-image{
             width: 200px;
         }
 
         .product-description-container{
-            border: 1px solid red;
+            border: 1px solid black;
         }
     }
 }
