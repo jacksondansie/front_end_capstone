@@ -1,0 +1,25 @@
+.page-container{
+    font-size: 2rem;
+    height: 100vh;
+
+        .feedback-box{
+            width: 60vw;
+            padding: 10px;
+            margin-right: 20px;
+            filter: drop-shadow(0 0.1rem 0.1rem rgba(0, 0, 0, 0.3));
+        }
+
+        .feedback-box:clicked{
+            border: none;
+        }
+
+        .feedback-btn{
+            color: white;
+            border: none;
+            background-color: #5F6368;
+            padding: .5vw;
+            cursor: pointer;
+            filter: drop-shadow(0 0.1rem 0.1rem rgba(0, 0, 0, 0.3));
+        }
+    
+}

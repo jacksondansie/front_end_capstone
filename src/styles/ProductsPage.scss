@@ -3,10 +3,28 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-color: darkgray;
 
     .button-container{
         display: flex;
         justify-content: center;
+        margin: 3vw 0px 3vw 0;
+
+        .filter-btns{
+            background-color: white;
+            font-size: 1rem;
+            border: none;
+            margin: 0px 2vw 0px 5vw;
+            padding: .5vw 1vw;
+            border-radius: 5px;
+        }
+
+        .filter-btns:hover{
+            color: white;
+            background-color: #5F6368;
+            border: none;
+            cursor: pointer;
+        }
     }
     
     .containers-for-all-products{
@@ -14,24 +32,51 @@
         grid-template-columns: repeat(2, 40vw);
         justify-content: center;
         grid-gap:5vw;
-        width: 100vw;  
+        width: 100vw;
+        margin-top: 3vw;
     }
 
     .product{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         width: 40vw;
-        border: 1px solid black;
-        margin-top: 20px;
+        border: 1px solid lightgrey;
+        background-color: white;
 
         .product-image{
-            width: 200px;
+            width: 20vw;
+            padding: 2vw;
         }
 
         .product-description-container{
-            border: 1px solid black;
+            width: 40vw;
+            background-color: lightgray;
+            color: #45484b;
+            filter: drop-shadow(0 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+            font-size: 1rem;
+        
+            .add-to-cart-btn{
+                color: #5F6368;
+                background-color: white;
+                font-size: 1rem;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 1.5vh;
+            }
+
+            .add-to-cart-btn:hover{
+                color: white;
+                background-color: #5F6368;
+                cursor: pointer;
+            }
+
+            .product-link{
+                font-style: none;
+                color: black;
+            }
+
         }
     }
 }

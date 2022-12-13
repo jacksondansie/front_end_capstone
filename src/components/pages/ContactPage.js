@@ -1,12 +1,32 @@
+import "../../styles/ContactPage.scss"
+import { useState } from "react";
+
 export default function ContactPage() {
+    const [message, setMessage] = useState("")
+
+    function handleSubmit(e){
+        setMessage("")
+        e.preventDefault();
+        window.alert("Message Submited");
+    }
+
     return(
-        <div>
+        <div className="page-container"> 
             <h1>Contact Page</h1>
-            <p>Wire up a notifciation that hows the user that the message was sent, then clears form after</p>
-            <form>
-                <input placeholder="Reach out to us."/>
-                <button>Submit</button>
-            </form>
+            <p>We appreciate your feedback.</p>
+
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <input 
+                        placeholder="Reach out to us." 
+                        className="feedback-box" 
+                        value={message} 
+                        onChange={(e) => setMessage(e.target.value)}
+                    />
+
+                    <button className="feedback-btn">Submit</button>
+                </form>
+            </div>
         </div>
     )
 }

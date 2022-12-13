@@ -2,13 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: darkgray;
+    height: 100vh;
 
     .users-cart{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 85vw;
-        border: 3px solid black;
+        border: 3px solid white;
     }
 
     .individual-products{
@@ -21,10 +23,22 @@
         }
 
         .product-description-container{
+            color: black;
+            background-color: white;
             width: 50vw;
             border: 1px solid black;
             padding: 0px 15px 0px 15px;
             margin: 20px;
+            font-size: 1.5rem;
         }
+
+    }
+
+    .empty-btn{
+        color: black;
+        background-color: white;
+        border: none;
+        font-size: 1rem;
+        padding: 10px;
     }
 }

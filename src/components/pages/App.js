@@ -9,6 +9,7 @@ import ProductsPage from "./ProductsPage";
 import CartProvider from '../products/CartProvider';
 import IndividualProductPage from "./IndividualProductPage";
 
+
 export default function App() {
   return (
     <div className="app">

@@ -4,12 +4,21 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100vw;
+    width: 99vw;
     font-style: none;
+    background-color: #5F6368;
+    // background-color: #003F17;
+    padding: 10px;
 
     .navlink{
       color: black;
       text-decoration: none;
+      color: white;
+
+    }
+
+    .navlink:hover{
+      color: black;
     }
   }
 }

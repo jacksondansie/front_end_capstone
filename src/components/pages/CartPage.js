@@ -7,8 +7,20 @@ import "../../styles/CartPage.scss"
 
 export default function CartPage(){
     const { cart, clearCart } = useContext(CartContext); 
-    const [cartTotal, setCartTotal] = useState([])
     const formatter = MoneyFormatter
+
+    // useEffect(() => {console.log(cartTotal)}, [])
+
+    function cartTotal(){
+        const totals = [];
+        if (cart.length > 0)  {
+        cart.forEach((product) => {
+            totals.push(product[0].price * product[1].quantity)
+        }) 
+            return totals.reduce((prev, current) => prev + current, 0)
+        }
+        return false
+    }
 
     return(
         <div className="page-container">
@@ -19,24 +31,24 @@ export default function CartPage(){
             <div className="users-cart">
                 {cart.map(data => { 
                     return (
-                    <div key={data.id}>
+                    <div key={data[0].id}>
                         <div className="individual-products"> 
-                            <img src={data.image} alt="product-img" className="product-image"/>
+                            <img src={data[0].image} alt="product-img" className="product-image"/>
 
                             <div className="product-description-container">
-                                <h5 className="product-name">{data.title}</h5>
-                                <h5 className="product-description">{data.description}</h5>
-                                <h5 className="product-category">{data.category}</h5>
-                                <h5><Link to={`/products/${data.id}`}>See more details</Link></h5>
+                                <h5 className="product-name">{data[0].title}</h5>
+                                <h5 className="product-description">{data[0].description}</h5>
+                                <h5 className="product-category">{data[0].category}</h5>
+                                <h5><Link to={`/products/${data[0].id}`}>See more details</Link></h5>
                             </div>
 
                             <div>
-                                <h5 className="product-price">{formatter(data.price)}</h5>
-                                <button>X</button>
+                                <h5>Quantity: {data[1].quantity}</h5>
+                                <h5 className="product-price">{formatter(data[0].price)}</h5>
                             </div>
                         </div>
                     </div>)})}
-                    <h1>{}</h1>
-                    <button onClick={() => clearCart()}>Empty Cart</button>
                 </div>
+                    <h1>Your Total: {formatter(cartTotal())}</h1>
+                    <button className="empty-btn" onClick={() => clearCart()}>Empty Cart</button>
             </div>)}
