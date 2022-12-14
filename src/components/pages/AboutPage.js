@@ -4,7 +4,7 @@ export default function AboutPage() {
     return(
         <div className="page-container"> 
             <h1>About</h1>
-            <div className="main-container">
+            <div className="about-main-container">
                 <h2>Explain your Capstone:</h2>
                 <p>With this Front-End Capstone, we were assgined to build up a storefront. I decided to jump in and focus on the React Code that would make my website functional. I styled it to be more of a wholesale / minimalistic styled site.</p>
                 <h2>What did you learn throughout your time here:</h2>

@@ -1,9 +1,14 @@
-.page-container{
+.cart-page-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: darkgray;
     height: 100vh;
+
+    .header{
+        color: white;
+        font-size: 2rem;
+    }
 
     .users-cart{
         display: flex;
@@ -40,5 +45,11 @@
         border: none;
         font-size: 1rem;
         padding: 10px;
+    }
+
+    .empty-btn:hover{
+        color: white;
+        background: #5F6368;
+        cursor: pointer;
     }
 }

@@ -23,8 +23,8 @@ export default function CartPage(){
     }
 
     return(
-        <div className="page-container">
-            <div>
+        <div className="cart-page-container">
+            <div className="header">
                 <h1>Your Cart</h1>
             </div>
 
@@ -43,12 +43,12 @@ export default function CartPage(){
                             </div>
 
                             <div>
-                                <h5>Quantity: {data[1].quantity}</h5>
-                                <h5 className="product-price">{formatter(data[0].price)}</h5>
+                                <h2>Quantity: {data[1].quantity}</h2>
+                                <h2 className="product-price">{formatter(data[0].price)}</h2>
                             </div>
                         </div>
                     </div>)})}
                 </div>
-                    <h1>Your Total: {formatter(cartTotal())}</h1>
+                    <h1 className="header">Your Total: {formatter(cartTotal())}</h1>
                     <button className="empty-btn" onClick={() => clearCart()}>Empty Cart</button>
             </div>)}
